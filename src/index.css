@@ -1,0 +1,12 @@
+@import './reset.css';
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;900&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    background: #634F5F;
+  }
+  
+* {
+    box-sizing: border-box;
+}
