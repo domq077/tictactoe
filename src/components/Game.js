@@ -11,15 +11,33 @@ const Container = styled.div`
 `;
 
 const Title = styled.h1`
-    font-size: 7.5vw;
+    font-size: 6rem;
     font-weight: 500;
     text-align: center;
     padding: 5vh 0;
 `;
 
 const Moves = styled.div`
-    width: 200px;
-    margin: 20px auto;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 5vh;
+`;
+
+const Message = styled.p`
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+`;
+
+const Button = styled.button`
+    border: 3px solid #333333;
+    background: #C7C7C7;
+    width: 15vw;
+    height: 5vh;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    outline: none;
 `;
 
 const Game = () => {
@@ -47,7 +65,7 @@ const Game = () => {
     };
 
     const renderMoves = () => (
-        <button onClick={() => jumpTo(0)}>New Game</button>
+        <Button onClick={() => jumpTo(0)}>New Game</Button>
     )
 
     return (
@@ -57,9 +75,11 @@ const Game = () => {
             <Moves>
                 {
                     stepNumber < 9 || winner ? 
-                    <p>{winner ? 'Winner: ' + winner : 'Next Player: ' + (xIsNext ? 'X' : 'O')}</p>
+                    <Message>
+                        {winner ? 'Winner: ' + winner : 'Next Player: ' + (xIsNext ? 'X' : 'O')}
+                    </Message>
                     :
-                    <p>Game Over! Try one more time :)</p>
+                    <Message>Game Over! Try one more time :)</Message>
                 }
                 {renderMoves()}
             </Moves>
