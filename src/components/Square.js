@@ -1,18 +1,19 @@
 import React from 'react';
+import styled from 'styled-components';
 
-const style = {
-    background: 'lightblue',
-    border: '2px solid darkblue',
-    fontSize: '30px',
-    fontWeight: '8000',
-    cursor: 'pointer',
-    outline: 'none'
-};
+const Button = styled.button`
+    background: #F2ECFF;
+    border: 2px solid darkblue;
+    font-size: 40px;
+    font-weight: 900;
+    cursor: pointer;
+    outline: none;
+`;
 
 const Square = ({onClick, value}) => (
-    <button style={style} onClick={onClick}>
+    <Button onClick={onClick}>
         {value}
-    </button>
+    </Button>
 );
 
 export default Square;

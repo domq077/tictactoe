@@ -1,11 +1,26 @@
 import React, { useState } from 'react';
+import styled from 'styled-components';
 import { calculateWinner } from '../helper';
 import Board from './Board';
 
-const styles = {
-    width: '200px',
-    margin: '20px auto',
-};
+const Container = styled.div`
+    widht: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+`;
+
+const Title = styled.h1`
+    font-size: 7.5vw;
+    font-weight: 900;
+    text-align: center;
+    padding: 5vh 0;
+`;
+
+const Moves = styled.div`
+    width: 200px;
+    margin: 20px auto;
+`;
 
 const Game = () => {
     const [history, setHistory] = useState([Array(9).fill(null)]);
@@ -43,13 +58,14 @@ const Game = () => {
     )
 
     return (
-        <>
+        <Container>
+            <Title>Tic Tac Toe</Title>
             <Board squares={history[stepNumber]} onClick={handleClick} />
-            <div style={styles}>
+            <Moves>
                 <p>{winner ? 'Winner: ' + winner : 'Next Player: ' + (xIsNext ? 'X' : 'O')}</p>
                 {renderMoves()}
-            </div>
-        </>
+            </Moves>
+        </Container>
     )
 }
 
