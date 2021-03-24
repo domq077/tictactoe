@@ -12,7 +12,7 @@ const Container = styled.div`
 
 const Title = styled.h1`
     font-size: 7.5vw;
-    font-weight: 900;
+    font-weight: 500;
     text-align: center;
     padding: 5vh 0;
 `;

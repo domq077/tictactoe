@@ -4,8 +4,8 @@ import styled from 'styled-components';
 const Button = styled.button`
     background: #F2ECFF;
     border: 2px solid darkblue;
-    font-size: 40px;
-    font-weight: 900;
+    font-size: 50px;
+    font-weight: 700;
     cursor: pointer;
     outline: none;
 `;
